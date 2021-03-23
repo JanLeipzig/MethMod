@@ -55,7 +55,7 @@ optional arguments:
 
 
 ## Example data:
-cd example/;
+`cd example/;`
 
 ### Simple command
 ```
