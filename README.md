@@ -31,48 +31,60 @@ https://bioconda.github.io/user/install.html
 `python MethMod.py --infile input.fasta`
 
 ### Getting help
-`python MethMod.py -h`
-
+  ```
+  python MethMod.py -h
 usage: MethMod.py [-h] [-f] [-s] [-hd] [-w] [-sp SPECIES] -i INFILE
 
 Gaussian Mixture modeling (GMM) to identify possible subpopulations in observed/expected (O/E) CpG distributions. 
-The mean O/E CpG ratio for each fasta entry will be calculated. A GMM with one or two components is performed on 
-the distribution. A number of relevant parameters of the model are printed. Files with the distribution plots and 
-the calculated O/E CpG ratios can be created by using the respective option.
+The mean O/E CpG ratio for each fasta entry will be calculated. A GMM with one or two components is performed 
+on the distribution. A number of relevant parameters of the model are printed. Files with the distribution plots 
+and the calculated O/E CpG ratios can be created
+by using the respective option.
 
 optional arguments:
-
   -h, --help            show this help message and exit
-  
   -f, --figures         Create files with the distribution plots.
-  
   -s, --shuffled        Perform the analysis with the input data shuffled as well.
-  
   -hd, --header         Print a header line explaining the output columns.
-  
   -w, --cpg             Create files containing the O/E CpG values per fasta entry.
-  
-  -sp SPECIES, --species SPECIES  Give a species name for you input file.
-                        
-  -i INFILE, --infile INFILE  Input file name (fasta format).
+  -sp SPECIES, --species SPECIES
+                        Give a species name for you input file.
+  -i INFILE, --infile INFILE
+                        Input file name (fasta format).
+  ```
 
 
 ## Example data:
 cd example/;
 
 ### Simple command
-`python MethMod.py --infile example/Limnephilus_lunatus.fa` 
-
+```
+python MethMod.py --infile example/Limnephilus_lunatus.fa
 example/Limnephilus_lunatus 	real	 0.7143 	 0.9798 	 0.2655 	 0.77 	 0.23 	 -3676.0 	 -4246.0 	 2 	 0.8 	 0.21 	 0.5
+```
+
+Output columns:
+1. Species name
+2. Data type (real or shuffled)
+3. Mean lower component
+4. Mean higher component
+5. Distance between both components
+6. Fraction of data points in lower componnents
+7. Fraction of data points in higher componnents
+8. AIC for GMM with one component
+9. AIC for GMM with two components
+10. Number of components for which the AIC is lowest
+11. Mean of the overall O/E CpG distribution
+12. Stdev of the overall O/E CpG distribution
+13. Skew of the overall O/E CpG distribution
 
 ### All functions
-`python MethMod.py --infile example/Limnephilus_lunatus.fa  --shuffled --figures --cpg --header`
-
-#species	data_type	mean low	mean High	distance of means	fraction low	fraction high	AIC-1	AIC-2	Best-n	mean	stdev	skew
-
-example/Limnephilus_lunatus 	real	 0.7124 	 0.9717 	 0.2593 	 0.76 	 0.24 	 -3676.0 	 -4244.0 	 2 	 0.8 	 0.21 	 0.5
-
-example/Limnephilus_lunatus 	shuffled	 0.9905 	 1.0129 	 0.0223 	 0.78 	 0.22 	 -13949.0 	 -14906.0 	 2 	 1.0 	 0.14 	 0.18
+```
+python MethMod.py --infile example/Limnephilus_lunatus.fa  --shuffled --figures --cpg --header
+#species	                    data_type	  mean low	mean High	distance of means	fraction low	fraction high	AIC-1	    AIC-2	    Best-n	mean	  stdev	  skew
+example/Limnephilus_lunatus 	real	      0.7124 	  0.9717 	  0.2593 	          0.76 	        0.24 	        -3676.0 	-4244.0 	2 	    0.8 	  0.21 	  0.5
+example/Limnephilus_lunatus 	shuffled	  0.9905 	  1.0129 	  0.0223 	          0.78 	        0.22 	        -13949.0 	-14906.0 	2 	    1.0 	  0.14 	  0.18
+```
 
 The O/E CpG distribution plots of normal and shuffled data, and the
 files with the O/E CpG values per fasta entry will be created in the
