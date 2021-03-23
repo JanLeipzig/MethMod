@@ -7,7 +7,7 @@ methylation.
 
 ## Dependencies
 MethMod was succesfully tested with these software version:
-python-3.9.2
+python-3.9.2\\
 matplotlib-3.3.4
 biopython-1.78
 scikit-learn-0.24.1
