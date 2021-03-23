@@ -17,11 +17,12 @@ Older version are likely to work as well but have not been tested.
 
 An easy way to install the necessary tools is creating a conda
 environment using the provided file 'requirements.txt':
-conda create --name <env> --file requirements.txt
+
+`conda create --name <env> --file requirements.txt`
 
 For general information how to install bioconda please visit their
 website:
-https://bioconda.github.io/user/install.html
+(https://bioconda.github.io/user/install.html)
 
 ## Usage
 #Getting started:
