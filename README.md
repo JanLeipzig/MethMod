@@ -8,7 +8,7 @@ methylation.
 ## Dependencies
 MethMod was succesfully tested with these software version:
 
-* python-3.9.2\\
+* python-3.9.2
 * matplotlib-3.3.4
 * biopython-1.78
 * scikit-learn-0.24.1
@@ -25,10 +25,10 @@ website:
 https://bioconda.github.io/user/install.html
 
 ## Usage
-#Getting started:
+###Getting started:
 `python MethMod.py --infile input.fasta`
 
-#Getting help
+###Getting help
 `python MethMod.py -h`
 usage: MethMod.py [-h] [-f] [-s] [-hd] [-w] [-sp SPECIES] -i INFILE
 
@@ -51,11 +51,11 @@ optional arguments:
 ##Example data:
 cd example/;
 
-#Simple command
+##Simple command
 `python MethMod.py --infile example/Limnephilus_lunatus.fa` 
 example/Limnephilus_lunatus 	real	 0.7143 	 0.9798 	 0.2655 	 0.77 	 0.23 	 -3676.0 	 -4246.0 	 2 	 0.8 	 0.21 	 0.5
 
-#All functions
+##All functions
 `python MethMod.py --infile example/Limnephilus_lunatus.fa  --shuffled --figures --cpg --header`
 #species	data_type	mean low	mean High	distance of means	fraction low	fraction high	AIC-1	AIC-2	Best-n	mean	stdev	skew
 example/Limnephilus_lunatus 	real	 0.7124 	 0.9717 	 0.2593 	 0.76 	 0.24 	 -3676.0 	 -4244.0 	 2 	 0.8 	 0.21 	 0.5
