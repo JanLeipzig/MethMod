@@ -26,11 +26,11 @@ https://bioconda.github.io/user/install.html
 
 ## Usage
 
-##Getting started
+### Getting started
 
 `python MethMod.py --infile input.fasta`
 
-###Getting help
+### Getting help
 `python MethMod.py -h`
 usage: MethMod.py [-h] [-f] [-s] [-hd] [-w] [-sp SPECIES] -i INFILE
 
@@ -50,14 +50,14 @@ optional arguments:
                         Input file name (fasta format).
 
 
-##Example data:
+## Example data:
 cd example/;
 
-##Simple command
+### Simple command
 `python MethMod.py --infile example/Limnephilus_lunatus.fa` 
 example/Limnephilus_lunatus 	real	 0.7143 	 0.9798 	 0.2655 	 0.77 	 0.23 	 -3676.0 	 -4246.0 	 2 	 0.8 	 0.21 	 0.5
 
-##All functions
+### All functions
 `python MethMod.py --infile example/Limnephilus_lunatus.fa  --shuffled --figures --cpg --header`
 #species	data_type	mean low	mean High	distance of means	fraction low	fraction high	AIC-1	AIC-2	Best-n	mean	stdev	skew
 example/Limnephilus_lunatus 	real	 0.7124 	 0.9717 	 0.2593 	 0.76 	 0.24 	 -3676.0 	 -4244.0 	 2 	 0.8 	 0.21 	 0.5
@@ -74,7 +74,7 @@ should be similar (first two decimal places) but not identical.
 
 ## How to cite
 
-As soon it is published please cite:
+As soon as it is published please cite:
 Engelhardt, et al. "Evolution of DNA methylation across Ecdysozoa."
 XXX (2021): XXX
 
@@ -108,5 +108,5 @@ were calculated as well. All pairs of parameters were analyzed using
 two-dimensional scatterplots generated with R.
 
 We used the distance between the component means as an indicator for
-DNA methylation. If the distance is greater or equal to $0.25$, we
+DNA methylation. If the distance is greater or equal to 0.25, we
 assume DNA methylation is present, otherwise it is absent.
