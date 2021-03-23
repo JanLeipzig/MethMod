@@ -22,7 +22,7 @@ environment using the provided file 'requirements.txt':
 
 For general information how to install bioconda please visit their
 website:
-(https://bioconda.github.io/user/install.html)
+https://bioconda.github.io/user/install.html
 
 ## Usage
 #Getting started:
