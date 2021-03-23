@@ -8,10 +8,10 @@ methylation.
 ## Dependencies
 MethMod was succesfully tested with these software version:
 
-*python-3.9.2\\
-*matplotlib-3.3.4
-*biopython-1.78
-*scikit-learn-0.24.1
+* python-3.9.2\\
+* matplotlib-3.3.4
+* biopython-1.78
+* scikit-learn-0.24.1
 
 Older version are likely to work as well but have not been tested.
 
@@ -25,10 +25,10 @@ https://bioconda.github.io/user/install.html
 
 ## Usage
 #Getting started:
-python MethMod.py --infile input.fasta
+`python MethMod.py --infile input.fasta`
 
 #Getting help
-python MethMod.py -h
+`python MethMod.py -h`
 usage: MethMod.py [-h] [-f] [-s] [-hd] [-w] [-sp SPECIES] -i INFILE
 
 Gaussian Mixture modeling (GMM) to identify possible subpopulations in observed/expected (O/E) CpG distributions. The mean O/E CpG ratio for each fasta entry will be calculated. A GMM with one
@@ -51,11 +51,11 @@ optional arguments:
 cd example/;
 
 #Simple command
-python MethMod.py --infile example/Limnephilus_lunatus.fa 
+`python MethMod.py --infile example/Limnephilus_lunatus.fa` 
 example/Limnephilus_lunatus 	real	 0.7143 	 0.9798 	 0.2655 	 0.77 	 0.23 	 -3676.0 	 -4246.0 	 2 	 0.8 	 0.21 	 0.5
 
 #All functions
-python MethMod.py --infile example/Limnephilus_lunatus.fa  --shuffled --figures --cpg --header
+`python MethMod.py --infile example/Limnephilus_lunatus.fa  --shuffled --figures --cpg --header`
 #species	data_type	mean low	mean High	distance of means	fraction low	fraction high	AIC-1	AIC-2	Best-n	mean	stdev	skew
 example/Limnephilus_lunatus 	real	 0.7124 	 0.9717 	 0.2593 	 0.76 	 0.24 	 -3676.0 	 -4244.0 	 2 	 0.8 	 0.21 	 0.5
 example/Limnephilus_lunatus 	shuffled	 0.9905 	 1.0129 	 0.0223 	 0.78 	 0.22 	 -13949.0 	 -14906.0 	 2 	 1.0 	 0.14 	 0.18
@@ -94,8 +94,7 @@ length of the CDS. CDS shorter than 100 nucleotides or with more than
 We used a Gaussian Mixture Model (GMM) to identify possible
 subpopulations in the O/E CpG distribution. The Expectation
 Maximization algorithm in the python module 'sklearn' from the library
-\textit{scikit-learn} \cite{scikit-learn} version 0.23.1 was used to
-estimate the parameters. The GMM was modeled with one or two
+scikit-learn version 0.23.1 was used to estimate the parameters. The GMM was modeled with one or two
 components. For the GMM with one component, we calculated the Akaike
 information criterion (AIC). For the GMM with two components, we
 calculated the AIC and in addition the mean of each component, the
