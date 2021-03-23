@@ -158,11 +158,7 @@ if args.shuffled:
 
         nuc_list=list(record.seq)
         random.shuffle(nuc_list)
-        shuffled_rec = SeqRecord(
-            Seq("".join(nuc_list), record.seq.alphabet),
-            id="Shuffled",
-            description="Based on %s" % record.id,
-        )
+        shuffled_rec=SeqRecord("".join(nuc_list),'','','')
         g=shuffled_rec.seq.upper().count("G")
         c=shuffled_rec.seq.upper().count("C")
         cg=shuffled_rec.seq.upper().count("CG")
