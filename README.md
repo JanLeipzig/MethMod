@@ -26,7 +26,8 @@ https://bioconda.github.io/user/install.html
 
 ## Usage
 
-###Getting started:
+##Getting started
+
 `python MethMod.py --infile input.fasta`
 
 ###Getting help
