@@ -97,9 +97,9 @@ should be similar (first two decimal places) but not identical.
 
 ## How to cite
 
-As soon as it is published please cite:
-Engelhardt, et al. "Evolution of DNA methylation across Ecdysozoa."
-XXX (2021): XXX
+Please cite:
+Engelhardt, Jan, Oliver Scheer, Peter F. Stadler, and Sonja J. Prohaska. 
+"Evolution of DNA methylation across Ecdysozoa." Journal of molecular evolution 90, no. 1 (2022): 56-72.
 
 ## More
 Method description from Engelhardt et al. 2021:
